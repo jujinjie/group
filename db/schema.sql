@@ -22,7 +22,7 @@ CREATE TABLE commodity
 );
 
 
-CREATE TABLE order
+CREATE TABLE myorder
 (
 	orderid int NOT NULL AUTO_INCREMENT,
 	userid int NOT NULL,
@@ -58,7 +58,7 @@ CREATE TABLE goods_pocket
 	userid int NOT NULL,
 	commodityid int NOT NULL,
 	pocketno int NOT NULL,
-	FOREIGN KEY (orderid) references order(orderid),
+	FOREIGN KEY (orderid) references myorder(orderid),
 	FOREIGN KEY (userid) references users(userid),
 	FOREIGN KEY (commodityid) references commodity(commodityid),
 	FOREIGN KEY (pocketno) references pocket(pocketno)
@@ -71,7 +71,7 @@ CREATE TABLE getgoods
 	userid int NOT NULL,
 	commodityid int NOT NULL,
 	gettime DATETIME NOT NULL,
-	FOREIGN KEY (orderid) references order(orderid),
+	FOREIGN KEY (orderid) references myorder(orderid),
 	FOREIGN KEY (userid) references users(userid),
 	FOREIGN KEY (commodityid) references commodity(commodityid)
 );
