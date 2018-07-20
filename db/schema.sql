@@ -81,5 +81,7 @@ CREATE TABLE payment
 	orderid int NOT NULL,
 	userid int NOT NULL,
 	pay decimal (10,2) NOT NULL,
-	is_pay boolean NOT NULL
+	is_pay boolean NOT NULL,
+	FOREIGN KEY (orderid) references myorder(orderid),
+	FOREIGN KEY (userid) references users(userid)
 );
