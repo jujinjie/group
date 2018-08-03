@@ -65,7 +65,7 @@ delete:function(req,res,next){
 		}
  
 		pool.getConnection(function(err, connection) {
-			connection.query($sql.update, [param.name, param.age, +param.id], function(err, result) {
+			connection.query($sql.update, [param.username, param.phonenum,param.addr, +param.id], function(err, result) {
 				// 使用页面进行跳转提示
 				if(result.affectedRows > 0) {
 					res.render('suc', {

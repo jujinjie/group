@@ -1,0 +1,23 @@
+extends layout
+ 
+block content
+    h1 更新用户资料
+    form(method='post', action='/users/updateUser')
+        div.form-row
+            label
+                span userid:
+                input(type='text',name='userid')
+        div.form-row
+            label
+                span username:
+                input(type='text',name='username')
+        div.form-row
+            label
+                span phonenum:
+                input(type='text',name='phonenum')
+        div.form-row
+            label
+                span addr:
+                input(type='text',name='addr')
+        div.form-row
+            input(type='submit')

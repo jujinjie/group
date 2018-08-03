@@ -1,4 +1,4 @@
-CREATE DATABASE group_db;
+CREATE DATABASE IF NOT EXISTS group_db DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE group_db;
 
 CREATE TABLE users
