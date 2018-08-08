@@ -63,7 +63,7 @@ update: function (req, res, next) {
 		//	jsonWrite(res, undefined);
 		//	return;
 		//}
-		console.log(param);
+		//console.log(param);
 		pool.getConnection(function(err, connection) {
 				connection.query($sql.update, [param.username, param.phonenum,param.addr, +param.userid], function(err, result) {
 						// 使用页面进行跳转提示
