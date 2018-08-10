@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.get('/d',function(req,res){
+app.get('/usermanage',function(req,res){
 	res.render('updateUser');
 });
 // catch 404 and forward to error handler

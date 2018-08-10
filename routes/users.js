@@ -4,7 +4,8 @@ var userDao=require('../dao/userDao');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+ // res.send('respond with a resource');
+	res.render('userManage');
 });
 
 router.get('/addUser',function(req,res,next){
