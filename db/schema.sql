@@ -17,6 +17,7 @@ CREATE TABLE commodity
 	price decimal(10, 2) NOT NULL,
 	descr varchar(255) NOT NULL,
 	imgaddr varchar(255) NOT NULL,
+	group_status boolean Not NULL DEFAULT FALSE,
 	expiration_date DATETIME NOT NULL,
 	PRIMARY KEY (commodityid)
 );
